@@ -1,0 +1,26 @@
+<%if notice!= nil%>
+  <div class="alert alert-primary" role="alert"><%= notice %></div>
+<%end%>
+<p>
+  <strong>Descrição:</strong>
+  <%= @coin.description %>
+</p>
+
+<p>
+  <strong>Sigla:</strong>
+  <%= @coin.acronym %>
+</p>
+
+<p>
+  <strong>mining type:</strong>
+  <%= @coin.mining_type.description %>
+</p>
+
+<p>
+  <strong>imagem:</strong>
+  <p></p>
+  <%= image_tag @coin.url_image, size:"50x50" %>
+</p>
+
+<%= link_to 'Editar', edit_coin_path(@coin) %> |
+<%= link_to 'Voltar', coins_path %>

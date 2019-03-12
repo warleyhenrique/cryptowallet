@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CryptoWallet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-dark fixed-top bg-dark mb-4">
+        <%= link_to 'CryptoWallet', root_path, class:"navbar-brand mr-0 mr-md-2"%>
+        <div class="" id="navbarCollapse">
+           <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <%= link_to 'Portugûes', root_path(locale: 'pt-BR'), class:"nav-link"%>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Inglês', root_path(locale: 'en'), class:"nav-link"%>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+      <main class="flex-shrink-0">
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+      </main>
+      
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>

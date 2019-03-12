@@ -1,0 +1,10 @@
+<div class="card">
+  <h5 class="card-header"><%=t('titles.edit.coin')%></h5>
+  <div class="card-body">
+    <%= render 'form', coin: @coin %>
+    <div class="form-group col-md-6">
+        <%= link_to t('link.show'), @coin, class:"btn btn-primary" %>
+        <%= link_to t('link.back'), coins_path, class:"btn btn-secondary" %>
+    </div>
+  </div>
+</div>

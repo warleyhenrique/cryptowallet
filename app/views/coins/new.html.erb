@@ -1,0 +1,9 @@
+<div class="card">
+  <h5 class="card-header"><%=t('titles.new.coin')%></h5>
+  <div class="card-body">
+    <%= render 'formNew', coin: @coin %>
+    <div class="form-group col-md-6">
+      <%= link_to t('link.back'), coins_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>
