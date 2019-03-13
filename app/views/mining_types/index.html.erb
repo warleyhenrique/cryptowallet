@@ -1,4 +1,6 @@
-<p id="notice"><%= t(notice) %></p>
+<%if notice!= nil%>
+  <div class="alert alert-primary" role="alert"><%= notice %></div>
+<%end%>
 
 <h1><%=@mining_types.model_name.human(count: @mining_types.count)%></h1>
 
